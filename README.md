@@ -12,7 +12,7 @@ Generate forms for [resourceful](http://github.com/flatiron/resourceful) models
   
 # Tests
 
-     npm start
+     npm test
 
 # TODO
  - Update API to be more consistent with Director syntax ( using new keyword )
