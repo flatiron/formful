@@ -1,6 +1,6 @@
 # Formful - Unreleased Experimental v0.0.0
 
-Generic Form generator for [resourceful](http://github.com/flatiron/resourceful) models
+Generate forms for [resourceful](http://github.com/flatiron/resourceful) models
 
 # Installation
 
@@ -8,8 +8,12 @@ Generic Form generator for [resourceful](http://github.com/flatiron/resourceful)
 
 # Usage
 
-  see `examples/server.js` for now
+  see `examples/server.js` for now or run `npm start`
   
+# Tests
+
+     npm start
+
 # TODO
  - Update API to be more consistent with Director syntax ( using new keyword )
  - Implement as Flatiron plugin and integrate with `flatiron/scaffolding` branch
