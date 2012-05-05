@@ -1,17 +1,13 @@
-var vows = require('vows'),
-    assert = require('assert'),
-    APIeasy = require('api-easy'),
-    formful = require('../lib/formful');
-
-
-
-var resourceful = require('resourceful');
-var http = require('http');
-var restful = require('restful');
-
+var http        = require('http'),
+    vows        = require('vows'),
+    assert      = require('assert'),
+    APIeasy     = require('api-easy'),
+    formful     = require('../lib/formful'),
+    resourceful = require('resourceful'),
+    restful     = require('restful');
 
 //
-// 
+// Create a new Creature resource using the Resourceful library
 //
 var Creature = resourceful.define('creature', function () {
   //
@@ -25,26 +21,10 @@ var Creature = resourceful.define('creature', function () {
   this.string('name');
   this.string('description');
 
-  //
-  // Specify timestamp properties
-  //
-  this.timestamps();
 });
 
-//
-// Now that the `Creature` prototype is defined
-// we can add custom logic to be available on all instances
-//
-Creature.prototype.feed = function (food) {
-  this.belly.push(food);
-};
-
-
 var router = formful.createRouter(Creature);
-
 var restfulRouter = restful.createRouter(Creature)
-
-
 
 var server = http.createServer(function (req, res) {
   req.chunks = [];
@@ -65,9 +45,8 @@ server.listen(8000);
 var suite = APIeasy.describe('restful/restful-api-test');
 
 //
-// Remark: All restful routing testing is handled by 'restful' module and test suite
+// Remark: All restful routing testing is handled by 'restful' module test suite
 //
-
 suite.use('localhost', 8000)
   .setHeader('Content-Type', 'application/json')
   .followRedirect(false)
@@ -106,6 +85,5 @@ suite.use('localhost', 8000)
          var result = JSON.parse(body);
          assert.equal(result.name, "Unicorn");
       })
-  
 
 .export(module);
