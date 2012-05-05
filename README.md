@@ -15,7 +15,7 @@ Generate forms for [resourceful](http://github.com/flatiron/resourceful) models
      npm test
 
 # TODO
- - Update API to be more consistent with Director syntax ( using new keyword )
+ - Update API to be more consistent with Director syntax ( using `new` keyword )
  - Implement as Flatiron plugin and integrate with `flatiron/scaffolding` branch
  - Figure out Director.mount API so we can add `restful` dispatching as a mounted routing map instead of nested router.dispatches
  - Implement better view system ( maybe `viewful` )
