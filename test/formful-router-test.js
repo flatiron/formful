@@ -50,6 +50,8 @@ var suite = APIeasy.describe('restful/restful-api-test');
 suite.use('localhost', 8000)
   .setHeader('Content-Type', 'application/json')
   .followRedirect(false)
+    .get('/')
+      .expect(200)
     .get('/create')
       .expect(200)
     .next()
