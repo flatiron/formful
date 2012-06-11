@@ -53,37 +53,37 @@ suite.use('localhost', 8000)
     .get('/create')
       .expect(200)
     .next()
-    .post('/Creature')
+    .post('/creatures')
       .expect(201)
     .next()
-    .get('/Creature/1')
+    .get('/creatures/1')
       .expect(200)
     .next()
     .get('/create')
       .expect(200)
-    .get('/Creature/1/destroy')
+    .get('/creatures/1/destroy')
       .expect(200)
-    .get('/Creature/1/edit')
+    .get('/creatures/1/edit')
       .expect(200)
     .next()
-    .post('/Creature/1/update', { "name" : "Dragon" })
+    .post('/creatures/1/update', { "name" : "Dragon" })
       .expect(204)
     .next()
-    .get('/Creature/1')
+    .get('/creatures/1')
       .expect(200)
       .expect("should have correct name", function (err, res, body) {
          var result = JSON.parse(body);
-         assert.equal(result.name, "Dragon");
+         assert.equal(result.creature.name, "Dragon");
       })
     .next()
-    .put('/Creature/1', { "name" : "Unicorn" })
+    .put('/creatures/1', { "name" : "Unicorn" })
       .expect(204)
     .next()
-    .get('/Creature/1')
+    .get('/creatures/1')
       .expect(200)
       .expect("should have correct name", function (err, res, body) {
          var result = JSON.parse(body);
-         assert.equal(result.name, "Unicorn");
+         assert.equal(result.creature.name, "Unicorn");
       })
 
 .export(module);
