@@ -1,6 +1,6 @@
 # Formful - Unreleased Experimental v0.0.0
 
-Generate isomorphic forms and [director](http://github.com/flatiron/resourceful) routers based pm [resourceful](http://github.com/flatiron/resourceful) models.
+Generate isomorphic forms and [director](http://github.com/flatiron/resourceful) routers based on [resourceful](http://github.com/flatiron/resourceful) models.
 
 # Installation
 
