@@ -1,10 +1,9 @@
-var http        = require('http'),
-    vows        = require('vows'),
-    assert      = require('assert'),
-    APIeasy     = require('api-easy'),
-    formful     = require('../lib/formful'),
+var assert = require('assert'),
+    vows = require('vows'),
     resourceful = require('resourceful'),
-    restful     = require('restful');
+    formful = require('../lib/formful');
+
+
 
 //
 // Create a new Creature resource using the Resourceful library
@@ -23,67 +22,67 @@ var Creature = resourceful.define('creature', function () {
 
 });
 
-var router = formful.createRouter(Creature);
-var restfulRouter = restful.createRouter(Creature)
 
-var server = http.createServer(function (req, res) {
-  req.chunks = [];
-  req.on('data', function (chunk) {
-    req.chunks.push(chunk.toString());
-  });
-  router.dispatch(req, res, function (err) {
-    if (err) {
-      restfulRouter.dispatch(req, res, function (err) {
-        res.writeHead(404);
-        res.end();
-      })
+vows.describe('formful-engines-test').addBatch({
+  'When using `formful`': {
+    'formful.create(Resource)': {
+      topic: function () {
+        var self = this;
+        formful.create(Creature, function (err, result) {
+          if (err) {
+            return console.log(err);
+          }
+          self.callback(null, result);
+        });
+      },
+      'should return an HTML `create` form': function (template) {
+        assert.isString(template);
+      }
+    },
+    /*
+    'formful.show(Resource)': {
+      topic: function () {
+        var self = this;
+        formful.show('bob', Creature, function (err, result) {
+          if (err) {
+            return console.log(err);
+          }
+          self.callback(null, result);
+        });
+      },
+      'should return an HTML `show` form': function (template) {
+        assert.isString(template);
+      }
+    },
+    */
+    'formful.update(Resource)': {
+      topic: function () {
+        var self = this;
+        formful.update('bob', Creature, function (err, result) {
+          if (err) {
+            return console.log(err);
+          }
+          self.callback(null, result);
+        });
+      },
+      'should return an HTML `update` form': function (template) {
+        assert.isString(template);
+      }
+    },
+    'formful.destroy(Resource)': {
+      topic: function () {
+        var self = this;
+        formful.destroy('bob', Creature, function (err, result) {
+          if (err) {
+            return console.log(err);
+          }
+          self.callback(null, result);
+        });
+      },
+      'should return an HTML `destroy` form': function (template) {
+        assert.isString(template);
+      }
     }
-  });
-});
-server.listen(8000);
+  }
+}).export(module);
 
-var suite = APIeasy.describe('restful/restful-api-test');
-
-//
-// Remark: All restful routing testing is handled by 'restful' module test suite
-//
-suite.use('localhost', 8000)
-  .setHeader('Content-Type', 'application/json')
-  .followRedirect(false)
-    .get('/create')
-      .expect(200)
-    .next()
-    .post('/creatures')
-      .expect(201)
-    .next()
-    .get('/creatures/1')
-      .expect(200)
-    .next()
-    .get('/create')
-      .expect(200)
-    .get('/creatures/1/destroy')
-      .expect(200)
-    .get('/creatures/1/edit')
-      .expect(200)
-    .next()
-    .post('/creatures/1/update', { "name" : "Dragon" })
-      .expect(204)
-    .next()
-    .get('/creatures/1')
-      .expect(200)
-      .expect("should have correct name", function (err, res, body) {
-         var result = JSON.parse(body);
-         assert.equal(result.creature.name, "Dragon");
-      })
-    .next()
-    .put('/creatures/1', { "name" : "Unicorn" })
-      .expect(204)
-    .next()
-    .get('/creatures/1')
-      .expect(200)
-      .expect("should have correct name", function (err, res, body) {
-         var result = JSON.parse(body);
-         assert.equal(result.creature.name, "Unicorn");
-      })
-
-.export(module);
