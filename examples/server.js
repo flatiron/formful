@@ -1,6 +1,7 @@
 
 var http        = require('http'),
     formful     = require('../lib/formful'),
+    director    = require('director'),
     resourceful = require('resourceful'),
     restful     = require('restful');
 
@@ -21,28 +22,28 @@ var Creature = resourceful.define('creature', function () {
 
 });
 
-var formfulRouter  = formful.createRouter(Creature);
-var restfulRouter  = restful.createRouter(Creature)
+var router = new director.http.Router();
+formful.extendRouter(router, Creature);
+restful.extendRouter(router, Creature);
 
 var server = http.createServer(function (req, res) {
   req.chunks = [];
   req.on('data', function (chunk) {
     req.chunks.push(chunk.toString());
   });
-  
+
   //
   // TODO: Nested routers here is not right, should just be formfulRouter
   //       Director.mount seems to not want to work :-(
   //       Will investigate and fix. 
   //
-  restfulRouter.dispatch(req, res, function (err) {
+  router.dispatch(req, res, function (err) {
     if (err) {
-      formfulRouter.dispatch(req, res, function (err) {
-        res.writeHead(404);
-        res.end();
-      })
+      console.log(err);
     }
-  });
+    res.writeHead(404);
+    res.end();
+  })
 });
 
 server.listen(8000);
