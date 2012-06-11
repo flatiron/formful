@@ -42,7 +42,7 @@ var server = http.createServer(function (req, res) {
 });
 server.listen(8000);
 
-var suite = APIeasy.describe('restful/restful-api-test');
+var suite = APIeasy.describe('restful/formful-router-test');
 
 //
 // Remark: All restful routing testing is handled by 'restful' module test suite
@@ -56,7 +56,7 @@ suite.use('localhost', 8000)
       .expect(200)
     .next()
     .post('/creatures')
-      .expect(201)
+      .expect(302)
     .next()
     .get('/creatures/1')
       .expect(200)
