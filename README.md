@@ -15,6 +15,8 @@ Generate isomorphic forms and [director](http://github.com/flatiron/resourceful)
      npm test
 
 # TODO
+ - Rename /edit => /update
+ - Rename /create => /new
  - Implement as Flatiron plugin and integrate with `flatiron/scaffolding` branch
  - Better Twitter Bootstrap integration / styling
  - Implement better view system ( maybe `viewful` )
