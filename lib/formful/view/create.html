@@ -1,8 +1,12 @@
-<h2>This is the create form.</h2>
+<h1>This is the create form.</h1>
 
-<form class="form-search" action="/creatures" method ="POST">
-  <fieldset>
-  <legend>Creature Form</legend>
-  <div class="inputs"></div>
-  <input type="submit" value="create"/>
+<form class="form-search" action="/:resource" method ="POST">
+  <div class="well">
+    <fieldset>
+    <legend>Creature Form</legend>
+    <div class="inputs"></div>
+  </div>
+  <div class="well">
+    <input class="btn btn-primary create" type="submit" value="create"/>
+  </div>
 </form>
