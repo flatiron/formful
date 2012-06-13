@@ -1,20 +1,16 @@
 <div class="well">
   <h1>This is the show view</h1>
 </div>
-<div class="well">
-  <a href="/create" class="btn btn-primary create">Create a new Resource</a>
-</div>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th colspan="3">id</th>
+      <th colspan="2"><a class="edit" href="./:id/update">Edit</a>&nbsp;<a class="destroy" href="./:id/destroy">Destroy</a></th>
     </tr>
   </thead>
   <tbody class="records">
     <tr>
-      <td><a href="/creatures/1/show">1</a></td>
-      <td><a href="/creatures/1/edit">Edit</a></td>
-      <td><a href="/creatures/1/destroy">Destroy</a></td>
+      <td>prop</td>
+      <td>name</td>
     </tr>
   </tbody>
 </table>

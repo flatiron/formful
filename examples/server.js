@@ -1,4 +1,3 @@
-
 var http        = require('http'),
     formful     = require('../lib/formful'),
     director    = require('director'),
@@ -19,11 +18,8 @@ var Creature = resourceful.define('creature', function () {
   //
   this.string('name');
   this.string('description');
-  
-
 
 });
-
 
 var resourceful = require('resourceful');
 
@@ -77,28 +73,41 @@ var Creature = resourceful.define('creature', function () {
 });
 
 
+
 var router = new director.http.Router();
-formful.extendRouter(router, Creature);
-restful.extendRouter(router, Creature);
+var formfulRouter = formful.createRouter(Creature);
+var restfulRouter = restful.createRouter(Creature);
+
+//
+// Override the default restful response handlers,
+// to use the formfulRouter instead
+//
+
+restful.extendRouter(router, Creature, {}, function (req, res, status, key, value) {
+  formfulRouter.dispatch(req, res, function (err) {
+    if (err) {
+      if (res.statusCode === 201) {
+        res.write(302);
+        res.writeHead('Location', '/creatures');
+      }
+      res.end();
+    }
+  })
+});
 
 var server = http.createServer(function (req, res) {
   req.chunks = [];
   req.on('data', function (chunk) {
     req.chunks.push(chunk.toString());
   });
-
-  //
-  // TODO: Nested routers here is not right, should just be formfulRouter
-  //       Director.mount seems to not want to work :-(
-  //       Will investigate and fix. 
-  //
   router.dispatch(req, res, function (err) {
     if (err) {
-      console.log(err);
+      formfulRouter.dispatch(req, res, function (err) {
+        res.writeHead(404);
+        res.end();
+      })
     }
-    res.writeHead(404);
-    res.end();
-  })
+  });
 });
-
 server.listen(8000);
+
