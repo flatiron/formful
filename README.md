@@ -10,9 +10,17 @@ Isomorphic HTML forms for [director](http://github.com/flatiron/resourceful) rou
 
      npm install formful
 
+# Features
+
+  - Built on Twitter Bootstrap
+  - Can generate HTML CRUD forms based on Resourceful models or plain-ole JSON-Schema
+  - Can generate RESTful `Director` Router via `restful` library
+
 # Usage
 
-  see `examples/server.js` for now or run `npm start`
+  More documentation coming soon.
+  
+  For now, see `examples/server.js` for now or run `npm start`
   
 # Tests
 
