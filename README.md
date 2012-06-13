@@ -2,6 +2,10 @@
 
 Generate isomorphic forms and [director](http://github.com/flatiron/resourceful) routers based on [resourceful](http://github.com/flatiron/resourceful) models.
 
+# Online Demo
+
+<a href="http://formful.jit.su">http://formful.jit.su</a>
+
 # Installation
 
      npm install formful
