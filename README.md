@@ -1,6 +1,6 @@
 # Formful - Unreleased Experimental v0.0.0
 
-Isomorphic HTML forms for [director](http://github.com/flatiron/resourceful) routers and [resourceful](http://github.com/flatiron/resourceful) models.
+Isomorphic HTML forms for [Director](http://github.com/flatiron/director) routers and [Resourceful](http://github.com/flatiron/resourceful) models.
 
 # Online Demo
 
@@ -12,9 +12,10 @@ Isomorphic HTML forms for [director](http://github.com/flatiron/resourceful) rou
 
 # Features
 
-  - Built on Twitter Bootstrap
-  - Can generate HTML CRUD forms based on Resourceful models or plain-ole JSON-Schema
-  - Can generate RESTful `Director` Router via `restful` library
+  - Can generate isomorphic HTML CRUD forms
+  - Built on [Twitter Bootstrap](http://twitter.github.com/bootstrap/), [Director](http://github.com/flatiron/director), [Restful](http://github.com/flatiron/restful), and [Resourceful](http://github.com/flatiron/resourceful) 
+  - Supports [Resourceful](http://github.com/flatiron/resourceful)  models or regular JSON-schemas
+  - Hassle-free mark-up customization through simple HTML and jQuery
 
 # Usage
 
@@ -27,12 +28,10 @@ Isomorphic HTML forms for [director](http://github.com/flatiron/resourceful) rou
      npm test
 
 # TODO
- - Rename /create => /new
- - Replace string concats with $ selectors
- - Implement as Flatiron plugin and integrate with `flatiron/scaffolding` branch
- - Better Twitter Bootstrap integration / styling
- - Implement better view system ( maybe `viewful` )
- - Implemented and document browser support
- - Full property type support ( numeric, boolean, array, object )
- - Nested schema properties
- - Test improvements ( more tests / add helpers )
+ - Full `revalidator` property type support ( numeric, boolean, array, object )
+ - Better Twitter Bootstrap component integration / styling
+ - Replace string concats with $() selectors
+ - Implement as Flatiron plugin
+ - Implement client-side routing support
+ - Implement nested schema properties
+ - Add integration tests
