@@ -14,7 +14,7 @@ var resource = {
       "port": {
           "description": "the port your application should listen on",
           "type": "number",
-          "default": 8080
+          "default": 8080,
       },
       "host": {
           "description": "the host your application should listen on",
