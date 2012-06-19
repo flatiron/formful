@@ -87,11 +87,14 @@ var restfulRouter = restful.createRouter(Creature);
 
 restful.extendRouter(router, Creature, {}, function (req, res, status, key, value) {
   formfulRouter.dispatch(req, res, function (err) {
+    /*
+    if (res.statusCode === 201) {
+      res.write(302);
+      res.writeHead('Location', /creatures/');
+    }
+    */
     if (err) {
-      if (res.statusCode === 201) {
-        res.write(302);
-        res.writeHead('Location', '/creatures');
-      }
+      console.log(err)
       res.end();
     }
   })
@@ -124,9 +127,9 @@ var suite = APIeasy.describe('restful/formful-router-test');
 suite.use('localhost', 8000)
   .setHeader('Content-Type', 'application/json')
   .followRedirect(false)
-    .get('/')
+    .get('/creatures')
       .expect(200)
-    .get('/new')
+    .get('/creatures/new')
       .expect(200)
     .next()
     .post('/creatures')
@@ -135,7 +138,7 @@ suite.use('localhost', 8000)
     .get('/creatures/1')
       .expect(200)
     .next()
-    .get('/new')
+    .get('/creatures/new')
       .expect(200)
     .get('/creatures/1/destroy')
       .expect(200)
