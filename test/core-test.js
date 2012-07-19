@@ -8,13 +8,13 @@
 var assert = require('assert'),
     vows = require('vows'),
     formful = require('../'),
-    helpers = require('./helpers');
+    fixtures = require('./fixtures');
 
 vows.describe('formful/core').addBatch({
   'When using `formful`': {
     'creating a new router with one resource': {
       topic: function () {
-        var router = formful.createRouter(helpers.Creature);
+        var router = formful.createRouter(fixtures.Creature);
         this.callback(null, router);
       },
       'should return a routing map': function (err, router) {
@@ -29,7 +29,7 @@ vows.describe('formful/core').addBatch({
   'When using `formful`': {
     'creating a new router with multiple resources': {
       topic: function () {
-        var router = formful.createRouter([helpers.Creature, helpers.User]);
+        var router = formful.createRouter([fixtures.Creature, fixtures.User]);
         this.callback(null, router);
       },
       'should return a routing map': function (err, router) {
