@@ -25,9 +25,5 @@ var resource = {
   }
 };
 
-formful.create(resource, function (err, result) {
-  if (err) {
-    return console.log(err);
-  }
-  console.log(result);
-});
+var createForm = formful.form.create.render({ resource: resource });
+console.log(createForm)
