@@ -33,5 +33,5 @@ Isomorphic HTML forms for [Director](http://github.com/flatiron/director) router
  - Replace string concats with $() selectors
  - Implement as Flatiron plugin
  - Implement client-side routing support
- - Implement nested schema properties
+ - Fully implement relational resources
  - Add integration tests
