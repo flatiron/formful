@@ -1,4 +1,4 @@
-# Formful - Unreleased Experimental v0.0.0
+# Formful
 
 Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) resources.
 
@@ -27,6 +27,7 @@ var resourceful = require('resourceful'),
     Creature    = resourceful.define('creature');
 
 Creature.property('type', String, { default: "dragon" });
+Creature.property('email', String, { format: "email" });
 Creature.property('life', Number, { default: 10, min: 0, max: 20 });
 ```
 
@@ -34,10 +35,11 @@ Creature.property('life', Number, { default: 10, min: 0, max: 20 });
 
 ## As a stand-alone server
 
-To use formful as a stand-alone server you will have to:
-
- - Define resource(s)
- - Create a new server based on the resource(s) using `formful.createServer`
+```js
+formful.createServer([Creature]).listen(8000, function () {
+  console.log(' > formful server started on port 8000');
+});
+```
 
 Here is a code example of using formful as a stand-alone server: <a href="https://github.com/flatiron/formful/blob/master/examples/server.js">https://github.com/flatiron/formful/blob/master/examples/server.js</a>
 
@@ -45,11 +47,18 @@ Here is a code example of using formful as a stand-alone server: <a href="https:
 
 # Validation
 
-## TODO
+Formful will respect Resourceful validation through [revalidator](http://github.com/flatiron/revalidator). Not all types and formats are current implemented, but some are!
+
+Here is an example of trying to create a new creature without a valid email. Bad creature!
+
+<img src="https://raw.github.com/flatiron/formful/master/assets/validation.png"></img>
+
+<img src="https://raw.github.com/flatiron/formful/master/assets/show.png"></img>
 
 # Persistence
 
 ## TODO
+
 
 # Customization of forms
 
