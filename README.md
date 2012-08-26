@@ -47,7 +47,7 @@ Here is a code example of using formful as a stand-alone server: <a href="https:
 
 # Validation
 
-Formful will respect Resourceful validation through [revalidator](http://github.com/flatiron/revalidator). Not all types and formats are current implemented, but some are!
+Formful will respect Resourceful validation through [revalidator](http://github.com/flatiron/revalidator). Not all property types and formats are fully implemented yet, but they are all coming soon.
 
 Here is an example of trying to create a new creature without a valid email. Bad creature!
 
