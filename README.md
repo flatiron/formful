@@ -17,6 +17,14 @@ Isomorphic HTML forms for [Director](http://github.com/flatiron/director) router
   - Supports [Resourceful](http://github.com/flatiron/resourceful)  models or regular JSON-schemas
   - Hassle-free mark-up customization through simple HTML and jQuery
 
+# Customization of forms
+
+As of the `v0.1.0` release, form customization is not so awesome. This will be improved soon.
+
+Form "views" are created using the [viewful](http://github.com/flatiron/viewful). This means that you have full access to the `viewful.View` class and you could write your forms in one of **22** JavaScript templating engines.
+
+Right now, all forms and form components are stored as plain html files. Formful currently ships with no templating engine. All rendering and data-binding is handling through Presenters for each view. This is not ideal, and will be changing soon.
+
 # Usage
 
   More documentation coming soon.
