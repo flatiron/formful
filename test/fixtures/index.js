@@ -90,14 +90,14 @@ fixtures.User = resourceful.define('user', function () {
 });
 
 fixtures.Album = resourceful.define('album', function () {
-  this.use('couchdb', {database: "test3" })
-  //this.use('memory');
+  //this.use('couchdb', {database: "test3" })
+  this.use('memory');
   this.string('title');
 });
 
 fixtures.Song = resourceful.define('song', function () {
-  this.use('couchdb', {database: "test3" })
-  //this.use('memory');
+  //this.use('couchdb', {database: "test3" })
+  this.use('memory');
   this.number('bpm');
   this.string('description');
   this.string('title');
