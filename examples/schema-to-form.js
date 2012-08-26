@@ -25,5 +25,5 @@ var resource = {
   }
 };
 
-var createForm = formful.form.create.render({ resource: resource });
-console.log(createForm)
+// TODO: this works, but should be a .render() call instead
+console.log(formful.view.form.create.present({ resource: resource }));

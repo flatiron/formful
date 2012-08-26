@@ -21,14 +21,5 @@ var Creature = resourceful.define('creature', function () {
 
 });
 
-
-
-formful.create(Creature, function (err, result) {
-  
-  if (err) {
-    return console.log(err);
-  }
-  
-  console.log(result);
-  
-});
+// TODO: this works, but should be a .render() call instead
+console.log(formful.view.form.create.present(Creature));
