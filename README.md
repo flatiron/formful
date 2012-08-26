@@ -62,9 +62,9 @@ Here is an example of trying to create a new creature without a valid email. Bad
 
 # Customization of forms
 
-As of the `v0.1.0` release, form customization is not so awesome. This will be improved soon.
+As of the `v0.1.0` release, form customization is not so awesome. This will be improved soon. If you want to re-design the layouts of the default forms, I will accept the pull request.
 
-Form "views" are created using the [viewful](http://github.com/flatiron/viewful) library. This means that you have full access to the `viewful.View`. Viewful provides a rich set of features including support for **22** diffirent JavaScript templating engines!
+The form *View* is created by the [viewful](http://github.com/flatiron/viewful) library and is a `viewful.View` instance. Viewful provides a rich set of features including support for **22** different JavaScript templating engines!
 
 Right now, all forms and form components are stored as plain html files. Formful currently ships with no templating engine. All rendering and data-binding is handling through Presenters for each view. This is not ideal, and will be changing soon.
   

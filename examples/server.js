@@ -1,9 +1,12 @@
-var formful     = require('../lib/formful')
+var formful     = require('../lib/formful'),
+    resourceful = require('resourceful'),
+    Creature    = resourceful.define('creature');
 
-var macros = require('../test/macros'),
-    fixtures = require('../test/fixtures');
+Creature.property('type', String, { default: "dragon" });
+Creature.property('email', String, { format: "email" });
+Creature.property('life', Number, { default: 10, min: 0, max: 20 });
 
-formful.createServer([fixtures.Creature]).listen(8000, function () {
+formful.createServer([Creature]).listen(8000, function () {
   console.log(' > formful server started on port 8000');
 });
 
