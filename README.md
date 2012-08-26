@@ -57,8 +57,7 @@ Here is an example of trying to create a new creature without a valid email. Bad
 
 # Persistence
 
-## TODO
-
+Formful persists to data-providers using the Resourceful engine. You can find more information about Resourceful [here](http://github.com/flatiron/resourceful).
 
 # Customization of forms
 
