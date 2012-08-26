@@ -14,7 +14,7 @@ Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) re
 
 # Features
 
-  - Can reflect HTML forms from JSON-Schema or [Resourceful](http://github.com/flatiron/resourceful) resources
+  - Can reflect HTML forms [Resourceful](http://github.com/flatiron/resourceful) resources
   - Full [Resourceful](http://github.com/flatiron/resourceful) resource integration ( persistence / validation / schema )
   - Built on [Twitter Bootstrap](http://twitter.github.com/bootstrap/), [Viewful](http://github.com/flatiron/viewful) and [Restful](http://github.com/flatiron/restful)
 
@@ -63,7 +63,7 @@ Formful persists to data-providers using the Resourceful engine. You can find mo
 
 As of the `v0.1.0` release, form customization is not so awesome. This will be improved soon. If you want to re-design the layouts of the default forms, I will accept the pull request.
 
-The form *View* is created by the [viewful](http://github.com/flatiron/viewful) library and is a `viewful.View` instance. Viewful provides a rich set of features including support for **22** different JavaScript templating engines!
+The form **View** is created by the [viewful](http://github.com/flatiron/viewful) library and is a `viewful.View` instance. Viewful provides a rich set of features including support for **22** different JavaScript templating engines!
 
 Right now, all forms and form components are stored as plain html files. Formful currently ships with no templating engine. All rendering and data-binding is handling through Presenters for each view. This is not ideal, and will be changing soon.
   
