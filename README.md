@@ -55,7 +55,7 @@ Here is a code example of using formful as a stand-alone server: <a href="https:
 
 As of the `v0.1.0` release, form customization is not so awesome. This will be improved soon.
 
-Form "views" are created using the [viewful](http://github.com/flatiron/viewful). This means that you have full access to the `viewful.View` class and you could write your forms in one of **22** JavaScript templating engines.
+Form "views" are created using the [viewful](http://github.com/flatiron/viewful) library. This means that you have full access to the `viewful.View`. Viewful provides a rich set of features including support for **22** diffirent JavaScript templating engines!
 
 Right now, all forms and form components are stored as plain html files. Formful currently ships with no templating engine. All rendering and data-binding is handling through Presenters for each view. This is not ideal, and will be changing soon.
   
