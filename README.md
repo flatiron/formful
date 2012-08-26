@@ -1,6 +1,6 @@
 # Formful - Unreleased Experimental v0.0.0
 
-Reflect HTML forms for [Resourceful](http://github.com/flatiron/resourceful) resources.
+Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) resources.
 
 # Online Demo
 
@@ -17,6 +17,8 @@ Reflect HTML forms for [Resourceful](http://github.com/flatiron/resourceful) res
   - Can reflect HTML forms from JSON-Schema or [Resourceful](http://github.com/flatiron/resourceful) resources
   - Full [Resourceful](http://github.com/flatiron/resourceful) resource integration ( persistence / validation / schema )
   - Built on [Twitter Bootstrap](http://twitter.github.com/bootstrap/), [Viewful](http://github.com/flatiron/viewful) and [Restful](http://github.com/flatiron/restful)
+
+# Usage
 
 ## Define resource(s)
 
@@ -35,9 +37,19 @@ Creature.property('life', Number, { default: 10, min: 0, max: 20 });
 To use formful as a stand-alone server you will have to:
 
  - Define resource(s)
- - Create a new server based on the resource(s) using `restful.createServer`
+ - Create a new server based on the resource(s) using `formful.createServer`
 
-Here is a code example of using restful as a stand-alone server: <a href="https://github.com/flatiron/formful/blob/master/examples/server.js">https://github.com/flatiron/restful/blob/master/examples/server.js</a>
+Here is a code example of using formful as a stand-alone server: <a href="https://github.com/flatiron/formful/blob/master/examples/server.js">https://github.com/flatiron/formful/blob/master/examples/server.js</a>
+
+### TODO: SCREENSHOTS
+
+# Validation
+
+## TODO
+
+# Persistence
+
+## TODO
 
 # Customization of forms
 
