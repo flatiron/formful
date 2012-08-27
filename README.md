@@ -70,10 +70,10 @@ Currently, all forms and form components are stored [as plain html files](https:
      npm test
 
 # TODO
+ - Add integration tests for all browsers ( coming very soon )
  - Make isomorphic ( blocked by `Viewful` )
  - Full `revalidator` property type support ( numeric, boolean, array, object )
  - Better Twitter Bootstrap component integration / styling
  - Replace **all** string concats
  - Implement Flatiron plugin / Add Flatiron example
  - Fully implement relational resources
- - Add integration tests for all browsers
