@@ -2,8 +2,6 @@
 
 Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) resources.
 
-## Warning: Formful is a very young project. You might find it's still rough around the edges. Act accordingly!
-
 # Online Demo
 
 <a href="http://formful.jit.su">http://formful.jit.su</a>
@@ -14,9 +12,11 @@ Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) re
 
 # Features
 
-  - Zero-configuration HTML forms with validation and backend
+  - Zero-configuration HTML form generation with optional backend
   - Full [Resourceful](http://github.com/flatiron/resourceful) resource integration ( persistence / validation / schema )
   - Built with [Twitter Bootstrap](http://twitter.github.com/bootstrap/) and [Viewful](http://github.com/flatiron/viewful)
+
+#### Warning: Formful is a very young project. You might find it's still rough around the edges. Act accordingly!
 
 # Usage
 
@@ -55,7 +55,7 @@ Here is an example of trying to create a new creature without a valid email. Bad
 
 # Persistence
 
-Formful persists to data-providers using the Resourceful engine. You can find more information about Resourceful [here](http://github.com/flatiron/resourceful).
+Formful persists to data-providers using Resourceful. You can find more information about Resourceful [here](http://github.com/flatiron/resourceful).
 
 # Customization of forms
 
