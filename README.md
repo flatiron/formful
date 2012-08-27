@@ -43,11 +43,9 @@ formful.createServer([Creature]).listen(8000, function () {
 
 Here is a code example of using formful as a stand-alone server: <a href="https://github.com/flatiron/formful/blob/master/examples/server.js">https://github.com/flatiron/formful/blob/master/examples/server.js</a>
 
-### TODO: SCREENSHOTS
-
 # Validation
 
-Formful will respect Resourceful validation through [revalidator](http://github.com/flatiron/revalidator). Not all property types and formats are fully implemented yet, but they are all coming soon.
+Formful will respect [Resourceful](http://github.com/flatiron/resourceful) validation through [revalidator](http://github.com/flatiron/revalidator). Not all property types and formats are fully implemented in Formful yet, but they are all coming soon.
 
 Here is an example of trying to create a new creature without a valid email. Bad creature!
 
@@ -61,12 +59,12 @@ Formful persists to data-providers using the Resourceful engine. You can find mo
 
 # Customization of forms
 
-As of the `v0.1.0` release, form customization is not so awesome. This will be improved soon. If you want to re-design the layouts of the default forms, I will accept the pull request.
+As of the formful `v0.1.0` release, form customization is not so awesome. This will be improved soon.
 
-The form **View** is created by the [viewful](http://github.com/flatiron/viewful) library and is a `viewful.View` instance. Viewful provides a rich set of features including support for **22** different JavaScript templating engines!
+The form **View** is created by the [viewful](http://github.com/flatiron/viewful) library and is a `viewful.View` instance. Viewful provides a rich set of features including support for **22** different JavaScript templating engines.
 
-Right now, all forms and form components are stored as plain html files. Formful currently ships with no templating engine. All rendering and data-binding is handling through Presenters for each view. This is not ideal, and will be changing soon.
-  
+Currently, all forms and form components are stored [as plain html files](https://github.com/flatiron/formful/tree/master/lib/formful/view/form). Formful currently uses no templating engine. All rendering and data-binding is currently handled through a Presenter for each view. This is not ideal, and will be changing soon.
+
 # Tests
 
      npm test
