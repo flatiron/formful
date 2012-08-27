@@ -2,6 +2,8 @@
 
 Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) resources.
 
+## Warning: Formful is a very young project. You might find it's still rough around the edges. Act accordingly!
+
 # Online Demo
 
 <a href="http://formful.jit.su">http://formful.jit.su</a>
@@ -10,13 +12,11 @@ Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) re
 
      npm install formful
 
-## Warning: This is still a very young project. You might find it's still rough around the edges. Act accordingly!
-
 # Features
 
-  - Can reflect HTML forms [Resourceful](http://github.com/flatiron/resourceful) resources
+  - Zero-configuration HTML forms with validation and backend
   - Full [Resourceful](http://github.com/flatiron/resourceful) resource integration ( persistence / validation / schema )
-  - Built on [Twitter Bootstrap](http://twitter.github.com/bootstrap/), [Viewful](http://github.com/flatiron/viewful) and [Restful](http://github.com/flatiron/restful)
+  - Built with [Twitter Bootstrap](http://twitter.github.com/bootstrap/) and [Viewful](http://github.com/flatiron/viewful)
 
 # Usage
 
