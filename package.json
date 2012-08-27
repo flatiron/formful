@@ -1,13 +1,15 @@
 {
-  "author": "marak <marak.squires@gmail.com>",
+  "author": "marak <marak@nodejitsu.com>",
   "name": "formful",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./lib/formful",
   "dependencies": {
+    "broadway": "0.2.x",
     "cheerio": "0.7.x",
     "director": "1.0.x",
-    "resourceful": "0.1.x",
-    "restful": "0.1.x",
+    "resourceful": "0.3.x",
+    "restful": "0.4.x",
+    "viewful": "0.1.x",
     "utile": "~0.1.1"
   },
   "devDependencies": {
