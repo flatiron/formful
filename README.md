@@ -2,9 +2,7 @@
 
 Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) resources.
 
-# Online Demo
-
-<a href="http://formful.jit.su">http://formful.jit.su</a>
+#### Warning: Formful is a very young project. You might find it's still rough around the edges. Act accordingly!
 
 # Installation
 
@@ -16,7 +14,9 @@ Reflect HTML forms from [Resourceful](http://github.com/flatiron/resourceful) re
   - Full [Resourceful](http://github.com/flatiron/resourceful) resource integration ( persistence / validation / schema )
   - Built with [Twitter Bootstrap](http://twitter.github.com/bootstrap/) and [Viewful](http://github.com/flatiron/viewful)
 
-#### Warning: Formful is a very young project. You might find it's still rough around the edges. Act accordingly!
+# Online Demo
+
+<a href="http://formful.jit.su">http://formful.jit.su</a>
 
 # Usage
 
