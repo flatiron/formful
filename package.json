@@ -1,7 +1,7 @@
 {
   "author": "marak <marak@nodejitsu.com>",
   "name": "formful",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/formful",
   "dependencies": {
     "broadway": "0.2.x",
@@ -20,6 +20,7 @@
   "engines": {
     "node": "0.6.x"
   },
+  "subdomain": "formful",
   "scripts": {
     "start": "node examples/server.js",
     "test": "vows --spec"
