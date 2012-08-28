@@ -2,7 +2,7 @@ var formful     = require('../lib/formful'),
     resourceful = require('resourceful'),
     Creature    = resourceful.define('creature');
 
-Creature.property('type', String, { default: "dragon" });
+Creature.property('type', String, { default: "dragon", enum: ["Dragon", "Unicorn", "Pony"] });
 Creature.property('email', String, { format: "email" });
 Creature.property('life', Number, { default: 10, min: 0, max: 20 });
 
