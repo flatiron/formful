@@ -1,7 +1,7 @@
 {
   "author": "marak <marak@nodejitsu.com>",
   "name": "formful",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./lib/formful",
   "dependencies": {
     "broadway": "0.2.x",
