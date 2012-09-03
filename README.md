@@ -36,6 +36,7 @@ Creature.property('life', Number, { default: 10, min: 0, max: 20 });
 ## As a stand-alone server
 
 ```js
+var formful = require('formful');
 formful.createServer([Creature]).listen(8000, function () {
   console.log(' > formful server started on port 8000');
 });
